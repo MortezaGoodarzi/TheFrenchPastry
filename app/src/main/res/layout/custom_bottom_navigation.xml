@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="90dp">
+
+
+
+    <View
+        android:id="@+id/view8"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@drawable/back_top_view_bottom_nav"
+        app:layout_constraintBottom_toTopOf="@+id/cake"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/home_image"
+        android:src="@drawable/ic_home"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/home"
+        app:layout_constraintStart_toEndOf="@+id/cake"
+        app:layout_constraintTop_toTopOf="@+id/home" />
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/cake_image"
+        android:src="@drawable/ic_cake"
+        app:layout_constraintBottom_toBottomOf="@+id/cake"
+        app:layout_constraintEnd_toEndOf="@+id/cake"
+        app:layout_constraintStart_toStartOf="@+id/cake"
+        app:layout_constraintTop_toTopOf="@+id/cake" />
+
+
+
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/pastry_image"
+        android:src="@drawable/ic_pastry"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/pastry"
+        app:layout_constraintStart_toStartOf="@+id/pastry"
+        app:layout_constraintTop_toTopOf="@+id/pastry" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/user_image"
+        android:src="@drawable/ic_user"
+        app:layout_constraintBottom_toBottomOf="@+id/profile"
+        app:layout_constraintEnd_toStartOf="@+id/pastry"
+        app:layout_constraintStart_toStartOf="@+id/profile"
+        app:layout_constraintTop_toTopOf="@+id/profile" />
+
+    <View
+        android:id="@+id/pastry"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/shopping"
+        app:layout_constraintStart_toEndOf="@+id/profile"
+        app:layout_constraintTop_toTopOf="@+id/shopping" />
+
+    <View
+        android:id="@+id/home"
+        android:layout_width="0dp"
+        android:background="@drawable/back_item_bottom_nav"
+        android:layout_height="58dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/cake"/>
+
+    <View
+        android:id="@+id/profile"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/pastry"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/pastry" />
+
+    <View
+        android:id="@+id/cake"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="70dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/shopping"
+        app:layout_constraintTop_toTopOf="@+id/home" />
+    <View
+        android:id="@+id/shopping"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/cake"
+        app:layout_constraintStart_toEndOf="@+id/pastry"
+        app:layout_constraintTop_toTopOf="@+id/cake" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/polygon_image"
+        android:src="@drawable/ic_polygon"
+        app:layout_constraintBottom_toBottomOf="@+id/shopping"
+        app:layout_constraintEnd_toStartOf="@+id/cake"
+        app:layout_constraintStart_toEndOf="@+id/pastry" />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/shpping_image"
+        android:src="@drawable/ic_shopping_cart"
+        app:layout_constraintBottom_toBottomOf="@+id/home"
+        app:layout_constraintEnd_toStartOf="@+id/cake"
+        app:layout_constraintStart_toEndOf="@+id/pastry"
+        app:layout_constraintTop_toTopOf="@+id/imageView3" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

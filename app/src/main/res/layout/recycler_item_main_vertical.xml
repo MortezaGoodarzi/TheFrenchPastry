@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="6dp"
+    android:background="@drawable/back_item_recycler_main"
+    android:paddingBottom="10dp">
+
+    <FrameLayout
+        android:id="@+id/frameLayouts"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="0dp">
+
+            <ImageView
+                android:id="@+id/imgPastry"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:contentDescription="@string/img"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/img_place_holder" />
+
+        </androidx.cardview.widget.CardView>
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/txtPastryName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/color_text_black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/frameLayouts"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayouts"
+        tools:text="شیرینی دانمارکی" />
+
+    <TextView
+        android:id="@+id/txtMainPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:textColor="@color/color_text_black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/txtPastryName"
+        app:layout_constraintTop_toBottomOf="@+id/txtPastryName"
+        tools:text="300,000" />
+
+    <TextView
+        android:id="@+id/txtOffPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:textColor="@color/color_text_black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/txtMainPrice"
+        app:layout_constraintEnd_toStartOf="@+id/txtMainPrice"
+        app:layout_constraintTop_toTopOf="@+id/txtMainPrice"
+        tools:text="230,000" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="@string/tooman"
+        android:textColor="@color/color_text_black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/txtOffPrice"
+        app:layout_constraintEnd_toStartOf="@+id/txtOffPrice"
+        app:layout_constraintTop_toTopOf="@+id/txtOffPrice" />
+
+    <ImageView
+        android:id="@+id/imgOff"
+        android:layout_width="50dp"
+        android:layout_height="35dp"
+        android:layout_marginEnd="12dp"
+        android:contentDescription="@string/off_desc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/img_off" />
+
+    <TextView
+        android:id="@+id/txtOff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white_main"
+        app:layout_constraintBottom_toBottomOf="@+id/imgOff"
+        app:layout_constraintEnd_toEndOf="@+id/imgOff"
+        app:layout_constraintStart_toStartOf="@+id/imgOff"
+        app:layout_constraintTop_toTopOf="@+id/imgOff"
+        tools:text="55%" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/off"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="imgOff,txtOff,txtOffPrice"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtOther"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/more"
+        android:textColor="@color/color_text_black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageView23"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView23"
+        android:layout_width="25dp"
+        android:layout_height="20dp"
+        android:contentDescription="@string/image_desc"
+        app:layout_constraintBottom_toBottomOf="@+id/txtOther"
+        app:layout_constraintEnd_toStartOf="@+id/txtOther"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@+id/frameLayouts"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txtOther"
+        app:layout_constraintVertical_bias="0.75"
+        app:srcCompat="@drawable/ic_arrow_left" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/others"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="imageView23,txtOther" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/allViews"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids=",textView8,txtMainPrice,txtPastryName,frameLayouts" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
