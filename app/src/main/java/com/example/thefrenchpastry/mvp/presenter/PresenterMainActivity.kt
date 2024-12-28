@@ -17,8 +17,5 @@ class PresenterMainActivity(
 
     private fun showNavigationDrawer() {
         view.showNavDrawer()
-        //ne
     }
-
-
 }

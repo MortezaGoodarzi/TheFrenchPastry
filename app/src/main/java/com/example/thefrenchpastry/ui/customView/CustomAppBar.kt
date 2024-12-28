@@ -56,5 +56,4 @@ class CustomAppBar(
             utils.finished()
         }
     }
-
 }
